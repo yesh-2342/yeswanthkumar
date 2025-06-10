@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Yeswanth Kumar showcasing skills, projects, and contact information.">
+    <title>Portfolio - Yeswanth Kumar</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <h1>Yeswanth Kumar</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#education">Education</a>
+            <a href="#hobbies">Hobbies</a>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <img src="c:\Users\yeswanth kumar\OneDrive\Pictures\WhatsApp Image 2025-06-07 at 13.44.53_c31d4388.jpg" alt="Yeswanth Kumar" style="width: 150px; height: 150px; border-radius: 50%;">
+        <p>Hello! I'm Yeswanth Kumar, a passionate developer with expertise in creating dynamic and responsive web applications. I love solving problems and building innovative solutions.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>java</li>
+            <li>Python, Django</li>
+            <li>Database Management (MySQL, MongoDB)</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <h3>Project 1: Portfolio Website</h3>
+                <p>A personal portfolio website showcasing my skills and projects.</p>
+            </li>
+            <li>
+                <h3>Project 2: E-commerce Platform</h3>
+                <p>An online shopping platform with user authentication and payment integration.</p>
+            </li>
+            <li>
+                <h3>Project 3: Blog Application</h3>
+                <p>A dynamic blog application with CRUD functionality and user comments.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <h3>computer science (network)</h3>
+                <p>presidency university,2023 to 2027</p>
+            </li>
+            <li>
+                <h3>High School</h3>
+                <p>10th passed out in 2019 </p>
+            </li>
+        </ul>
+    </section>
+    <section id="hobbies" class="hobbies">
+        <h2>HOBBIES</h2>
+        <ul>
+            <li>Reading</li>
+            <li>Coding</li>
+            <li>Traveling</li>
+            <li>Photography</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
+        <phone> 9390125963</phone>
+        <p>Email: yeshk2328@gmail.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yeswanthkumar" target="_blank">linkedin.com/in/yeswanthkumar</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Yeswanth Kumar. All rights reserved.</p>
+    </footer>
+    <script src="portfolio.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Animate skill bars
+    document.querySelectorAll('.skill-level').forEach(function(bar) {
+        const width = bar.getAttribute('data-width');
+        setTimeout(() => {
+            bar.style.width = width;
+        }, 500);
+    });
+
+    // Fade-in sections on scroll
+    function revealSections() {
+        document.querySelectorAll('section').forEach(function(section) {
+            const rect = section.getBoundingClientRect();
+            if(rect.top < window.innerHeight - 50) {
+                section.classList.add('visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', revealSections);
+    revealSections();
+});
+</script>
+</body>
+</html>
